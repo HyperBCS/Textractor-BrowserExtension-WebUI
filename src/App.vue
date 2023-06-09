@@ -14,8 +14,8 @@
     </section>
     <section class="messages">
       <div class="container">
-        <div class="card fade-in-fwd" :class="{ 'has-background-grey-dark': darkMode }" v-for="msg in messages"
-          :key='msg'>
+        <div class="card fade-in-fwd" :class="{ 'has-background-grey-dark': darkMode }" v-for="(msg, index) in messages"
+          :key='msg + "_" + index'>
           <div class="card-content" :class="{ 'has-text-white': darkMode }">
             {{ msg }}
           </div>
